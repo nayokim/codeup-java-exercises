@@ -47,16 +47,14 @@ public class ConsoleExercises {
 
         //5 Prompt the user to enter values of length and width of a classroom at Codeup.
         System.out.println("Enter the length of the classroom");
-        String userLength = scanner.nextLine();
+        float userLength = Float.parseFloat(scanner.nextLine());
         System.out.println("Enter the width of the classroom");
-        String userWidth = scanner.nextLine();
+        float userWidth = Float.parseFloat(scanner.nextLine());
 
         //Use the nextLine method to get user input and [parse](https://docs.oracle.com/javase/7/docs/api/java/lang/Integer.html#parseInt(java.lang.String) the resulting string to a numeric type.
-        int length = Integer.parseInt(userLength);
-        int width = Integer.parseInt(userWidth);
 
-        int perimeter = (2 * length) + (2 * width);
-        int area = length * width;
+        float perimeter = (2 * userLength) + (2 * userWidth);
+        float area = userLength * userWidth;
         System.out.println ("perimeter of the class is: " + perimeter);
         System.out.println ("Area of the class is: " + area);
 
