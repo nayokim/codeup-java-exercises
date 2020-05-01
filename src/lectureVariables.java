@@ -1,4 +1,4 @@
-public class lecture {
+public class lectureVariables {
     public static void main(String[] args) {
         System.out.println("hello world!");
         //in js let name = "fer"
