@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
         //Loop Basics
@@ -10,6 +12,7 @@ public class ControlFlowExercises {
         //Your output should look like this:
         //
         //5 6 7 8 9 10 11 12 13 14 15
+
 
 //        int i = 5;
 //        while (i <= 15){
@@ -72,20 +75,41 @@ public class ControlFlowExercises {
 //            System.out.println(counter);
 //        }
         //For multiples of three: print “Fizz” instead of the number.
-        for (int counter = 1; counter <=100; counter++){
-            if(counter % 3 == 0 && counter % 5 ==0){
-                System.out.println("FizzBuzz");
-            } else if (counter % 3 == 0){
-                System.out.println("fizz");
-                //For the multiples of five: print “Buzz”.
-            } else if (counter % 5 == 0) {
-                System.out.println("buzz");
-                //For numbers which are multiples of both three and five: print “FizzBuzz”.
-            } else{
-                System.out.println(counter);
-            }
+//        for (int counter = 1; counter <=100; counter++){
+//            if(counter % 3 == 0 && counter % 5 ==0){
+//                System.out.println("FizzBuzz");
+//            } else if (counter % 3 == 0){
+//                System.out.println("fizz");
+//                //For the multiples of five: print “Buzz”.
+//            } else if (counter % 5 == 0) {
+//                System.out.println("buzz");
+//                //For numbers which are multiples of both three and five: print “FizzBuzz”.
+//            } else{
+//                System.out.println(counter);
+//            }
+//        }
 
-        }
+
+        //Display a table of powers.
+        //Prompt the user to enter an integer.
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an integer");
+        int num = scanner.nextInt();
+        //Display a table of squares and cubes from 1 to the value entered.
+
+        System.out.println("Here is your table!");
+        System.out.println("Number | Squared | Cubed");
+        System.out.println("-------|---------|---------");
+        for (int i = 1; i < num ; i++ ){
+            System.out.printf("    %d  |    %d    |    %d%n", i, i*i, i*i*i);
+        };
+
+
+
+
+        //Ask if the user wants to continue.
+        //Assume that the user will enter valid data.
+        //Only continue if the user agrees to.
 
 
     }
