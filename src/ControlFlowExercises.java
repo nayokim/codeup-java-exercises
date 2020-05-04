@@ -18,6 +18,12 @@ public class ControlFlowExercises {
 //        }
 
 
+//        //for loop
+//        for (int i = 5; i <=15; i++){
+//            System.out.println("In a for-loop i: " + i);
+//        }
+
+
 //Do While
 //Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
 //        int counter = 0;
@@ -25,22 +31,37 @@ public class ControlFlowExercises {
 //            System.out.println("do while by 2's: " + counter );
 //            counter+=2;
 //        } while (counter <=100);
+
+//        //for loop
+//        for (int counter = 0; counter <=100; counter +=2 ){
+//            System.out.println("for loop by 2's: " + counter  );
+//        }
 //Alter your loop to count backwards by 5's from 100 to -10.
 //        int counter = 100;
 //        do {
 //            System.out.println("Do while backward by 5: " + counter);
 //            counter -= 5;
 //        } while (counter >=-10 );
+
+//        //for loop
+//        for (int counter = 100; counter >= -10; counter-=5){
+//            System.out.println("for loop backward by 5: " + counter);
+//        }
 //Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
 // 2
 // 4
 // 16
 // 256
 // 65536
-        int counter = 2;
-        do {
-            System.out.println("Exp. do while: " + counter);
-            counter = (int) Math.pow(counter,2);
-        } while(counter < 1000000);
+//        int counter = 2;
+//        do {
+//            System.out.println("Exp. do while: " + counter);
+//            counter = (int) Math.pow(counter,2);
+//        } while(counter < 1000000);
+
+//        //for loop
+//        for (int counter =2; counter < 1000000; counter = (int) Math.pow(counter,2)){
+//            System.out.println("For loop exp: " + counter);
+//        }
     }
 }
