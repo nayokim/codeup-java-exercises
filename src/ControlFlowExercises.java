@@ -95,16 +95,19 @@ public class ControlFlowExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter an integer");
         int num = scanner.nextInt();
-        //Display a table of squares and cubes from 1 to the value entered.
-
-        System.out.println("Here is your table!");
-        System.out.println("Number | Squared | Cubed");
-        System.out.println("-------|---------|---------");
-        for (int i = 1; i < num ; i++ ){
-            System.out.printf("    %d  |    %d    |    %d%n", i, i*i, i*i*i);
+        System.out.println("Do you want to continue? [y/n]");
+        String userInput = scanner.next();
+        if (userInput.equals("y")) {
+            //Display a table of squares and cubes from 1 to the value entered.
+            System.out.println("Here is your table!");
+            System.out.println("Number | Squared | Cubed");
+            System.out.println("-------|---------|---------");
+            for (int i = 1; i < num; i++) {
+                System.out.printf("    %d  |    %d    |    %d%n", i, i * i, i * i * i);
+            }
+        } else {
+            System.out.println("Okay, thank you!");
         };
-
-
 
 
         //Ask if the user wants to continue.

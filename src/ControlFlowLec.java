@@ -67,16 +67,17 @@ public class ControlFlowLec {
 //        boolean shouldShowLogin = !isLoggedIn;
 //        System.out.println("shouldShowLogIn " + shouldShowLogin);
 
-//        Scanner sc = new Scanner(System.in);
-//        System.out.print("Continue? [y/n]");
-//        String userInput = sc.next();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Continue? [y/n]");
+        String userInput = sc.next();
 //
 //        //COMPARING STRINGS- never do this!
-////        boolean confirmation = userInput == "y";
-////        System.out.println("confirmation: " + confirmation); //prints false.
-//
-//        //COMPARING STRINGS - THE CORRECT WAY. Always use .equals() to compare strings
-//        boolean confirmation = userInput.equals("y");
+//        boolean confirmation = userInput == "y";
+//        System.out.println("confirmation: " + confirmation); //prints false.
+
+        //COMPARING STRINGS - THE CORRECT WAY. Always use .equals() to compare strings
+        boolean confirmation = userInput.equals("y");
+        System.out.println(confirmation);
 
 //        // control structures
 //        //if
