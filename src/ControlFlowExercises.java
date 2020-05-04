@@ -16,14 +16,14 @@ public class ControlFlowExercises {
 
 //        int i = 5;
 //        while (i <= 15){
-//            System.out.println("the current value of i:" + i);
+//            System.out.print(i + " ");
 //            i++;
 //        }
 
 
 //        //for loop
 //        for (int i = 5; i <=15; i++){
-//            System.out.println("In a for-loop i: " + i);
+//            System.out.println(i + " ");
 //        }
 
 
@@ -57,13 +57,17 @@ public class ControlFlowExercises {
 // 256
 // 65536
 //        int counter = 2;
+//        long counter = 2L;
 //        do {
 //            System.out.println("Exp. do while: " + counter);
-//            counter = (int) Math.pow(counter,2);
-//        } while(counter < 1000000);
+////            counter = (int) Math.pow(counter,2); //or
+//            counter *= counter;
+//
+//        } while(counter < 1000000L);
 
 //        //for loop
 //        for (int counter =2; counter < 1000000; counter = (int) Math.pow(counter,2)){
+//        for (long counter =2L; counter < 1000000; counter *= counter)){
 //            System.out.println("For loop exp: " + counter);
 //        }
 
@@ -108,42 +112,83 @@ public class ControlFlowExercises {
 //        } else {
 //            System.out.println("Okay, thank you!");
 //        };
+
+        //using do-while
+//        Scanner scanner = new Scanner(System.in);
+//        boolean userContinues = true;
+//        do {
+//            System.out.println("what number would you like to go up to?");
+//            int userInt = scanner.nextInt();
+//            System.out.println();
+//            System.out.println("here is your table");
+//            System.out.println();
+//            System.out.println("Number | Squared | Cubed");
+//            System.out.println("-------|---------|---------");
+//            for (int i = 0; i <= userInt; i++) {
+//                System.out.format("%-7d", i);
+//                System.out.print("|");
+//                System.out.format("%-9d", i * i);
+//                System.out.print("|");
+//                System.out.print(i * i * i);
+//                System.out.println();
+//            }
+//            System.out.println("Would you like to enter another number? [y/n]");
+//            String userResponse = scanner.next();
+//            if (!userResponse.equalsIgnoreCase("y")) {
+//                userContinues = false;
+//            }
+//
+//        } while (userContinues);
 //
 
         //Convert given number grades into letter grades.
         //Prompt the user for a numerical grade from 0 to 100.
-        System.out.println("Enter your grade from 0 to 100");
+//            System.out.println("Enter your grade from 0 to 100");
+//            Scanner scanner = new Scanner(System.in);
+//            int userInputGrade = scanner.nextInt();
+//            System.out.println("Do you want to continue? [y/n]");
+//            String userInput = scanner.next();
+//            if (userInput.equals("y")) {
+//                if (userInputGrade >= 0 && userInputGrade <= 59) {
+//                    System.out.println("Your grade is: F");
+//                } else if (userInputGrade >= 60 && userInputGrade <= 66) {
+//                    System.out.println("Your grade is: D");
+//                } else if (userInputGrade >= 67 && userInputGrade <= 79) {
+//                    System.out.println("Your grade is: C");
+//                } else if (userInputGrade >= 80 && userInputGrade <= 87) {
+//                    System.out.println("Your grade is: B");
+//                } else if (userInputGrade >= 88 && userInputGrade <= 100) {
+//                    System.out.println("Your grade is: A");
+//                } else {
+//                    System.out.println("Okay, you will not learn your grade");
+//                }
+//            }
+
+        //using do-while
         Scanner scanner = new Scanner(System.in);
-        int userInputGrade = scanner.nextInt();
-        System.out.println("Do you want to continue? [y/n]");
-        String userInput = scanner.next();
-        if (userInput.equals("y")) {
-            if (userInputGrade >= 0 && userInputGrade <= 59) {
+
+        boolean anotherGrade = true;
+        do {
+            System.out.print("Please enter a numerical grade from 0 to 100");
+
+            int numericGrade = scanner.nextInt();
+                 if (numericGrade >88) {
+                    System.out.println("Your grade is: A");
+                } else if (numericGrade >= 80) {
+                    System.out.println("Your grade is: B");
+                } else if (numericGrade >= 67 ) {
+                    System.out.println("Your grade is: C");
+                } else if (numericGrade >= 60 ) {
+                    System.out.println("Your grade is: D");
+                } else {
                 System.out.println("Your grade is: F");
-            } else if (userInputGrade >= 60 && userInputGrade <= 66) {
-                System.out.println("Your grade is: D");
-            } else if (userInputGrade >= 67 && userInputGrade <= 79) {
-                System.out.println("Your grade is: C");
-            } else if (userInputGrade >= 80 && userInputGrade <= 87) {
-                System.out.println("Your grade is: B");
-            } else if (userInputGrade >= 88 && userInputGrade <= 100) {
-                System.out.println("Your grade is: A");
             }
-        }else {
-            System.out.println("Okay, you will not learn your grade");
-        }
-
-            //Display the corresponding letter grade.
-            //Prompt the user to continue.
-            //Assume that the user will enter valid integers for the grades.
-            //The application should only continue if the user agrees to.
-            //Grade Ranges:
-            //A : 100 - 88
-            //B : 87 - 80
-            //C : 79 - 67
-            //D : 66 - 60
-            //F : 59 - 0
-
-
-        }
+                System.out.print("do you wish to enter a new grade?");
+                String userResponse = scanner.next();
+                if (!userResponse.equalsIgnoreCase("y")) {
+                    anotherGrade = false;
+                }
+            }
+            while (anotherGrade) ;
     }
+}
