@@ -92,27 +92,51 @@ public class ControlFlowExercises {
 
         //Display a table of powers.
         //Prompt the user to enter an integer.
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter an integer");
+//        int num = scanner.nextInt();
+//        System.out.println("Do you want to continue? [y/n]");
+//        String userInput = scanner.next();
+//        if (userInput.equals("y")) {
+//            //Display a table of squares and cubes from 1 to the value entered.
+//            System.out.println("Here is your table!");
+//            System.out.println("Number | Squared | Cubed");
+//            System.out.println("-------|---------|---------");
+//            for (int i = 1; i < num; i++) {
+//                System.out.printf("    %d  |    %d    |    %d%n", i, i * i, i * i * i);
+//            }
+//        } else {
+//            System.out.println("Okay, thank you!");
+//        };
+//
+
+        //Convert given number grades into letter grades.
+        //Prompt the user for a numerical grade from 0 to 100.
+        System.out.println("Enter your grade from 0 to 100");
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter an integer");
-        int num = scanner.nextInt();
-        System.out.println("Do you want to continue? [y/n]");
-        String userInput = scanner.next();
-        if (userInput.equals("y")) {
-            //Display a table of squares and cubes from 1 to the value entered.
-            System.out.println("Here is your table!");
-            System.out.println("Number | Squared | Cubed");
-            System.out.println("-------|---------|---------");
-            for (int i = 1; i < num; i++) {
-                System.out.printf("    %d  |    %d    |    %d%n", i, i * i, i * i * i);
-            }
-        } else {
-            System.out.println("Okay, thank you!");
-        };
+        int userInputGrade = scanner.nextInt();
+        if (userInputGrade >= 0 && userInputGrade <= 59){
+            System.out.println("Your grade is: F");
+        } else if (userInputGrade >=60 && userInputGrade <= 66){
+            System.out.println("Your grade is: D");
+        }else if (userInputGrade >=67 && userInputGrade <= 79){
+            System.out.println("Your grade is: C");
+        }else if (userInputGrade >=80 && userInputGrade <= 87){
+            System.out.println("Your grade is: B");
+        }else if (userInputGrade >=88 && userInputGrade <= 100){
+            System.out.println("Your grade is: A");
+        }
 
-
-        //Ask if the user wants to continue.
-        //Assume that the user will enter valid data.
-        //Only continue if the user agrees to.
+        //Display the corresponding letter grade.
+        //Prompt the user to continue.
+        //Assume that the user will enter valid integers for the grades.
+        //The application should only continue if the user agrees to.
+        //Grade Ranges:
+        //A : 100 - 88
+        //B : 87 - 80
+        //C : 79 - 67
+        //D : 66 - 60
+        //F : 59 - 0
 
 
     }
