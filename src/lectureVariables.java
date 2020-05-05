@@ -3,6 +3,8 @@ public class lectureVariables {
         System.out.println("hello world!");
         //in js let name = "fer"
         //in java
+        //in primitive types, the variable has the value stored inside it.
+        //int counter = 100; The value 100 is stored inside counter.
         String name = "fer";
         byte dayOfMonth = 31;
         short spendingLimit = 30000;
