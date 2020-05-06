@@ -7,10 +7,24 @@ public class MethodsExercises {
     public static void main(String[] args) {
         //1
 //        System.out.println(addition(1,2));
+        System.out.println( 2 == addition(1,1)); // testing
+        System.out.println( 0 == addition(-1,1));// testing
+        System.out.println( 0 != addition(-2,-5));// testing
 //        System.out.println(subtraction(1,2));
+        System.out.println( 4 == subtraction(5,1));// testing
+        System.out.println( -2 == subtraction(-1,1));// testing
 //        System.out.println(division(1,2));
+        System.out.println(2 == division (10,5));// testing
+        System.out.println(2 == division (5,10));// testing
+        System.out.println(2 == division (5,0));// testing
+
 //        System.out.println(multiplication(1,2));
+        System.out.println(2 == multiplication (10,5));// testing
+        System.out.println(50 == multiplication (5,10));// testing
+
 //        System.out.println(modulus(1,2));
+        System.out.println(1 == modulus(5,2));
+        System.out.println(0 == modulus(6,2));
 
         //2
 //        getInteger(1, 10);
@@ -23,7 +37,8 @@ public class MethodsExercises {
 //        rollDice();
 
         //5 guessing game
-        HighLow();
+//        HighLow();
+//        GuessNumber();
 
 
     } // end main class
@@ -32,27 +47,31 @@ public class MethodsExercises {
     //Create four separate methods. Each will perform an arithmetic operation:
     //Each function needs to take two parameters/arguments so that the operation can be performed.
     //Addition
-    public static int addition(int num1, int num2) {
+    public static double addition(double num1, double num2) {
         return num1 + num2;
     }
 
     //Subtraction
-    public static int subtraction(int input1, int input2) {
+    public static double subtraction(double input1, double input2) {
         return input1 - input2;
     }
 
     //Multiplication
-    public static int multiplication(int input1, int input2) {
+    public static double multiplication(double input1, double input2) {
         return input1 * input2;
     }
 
     //Division
-    public static int division(int input1, int input2) {
+    public static double division(double input1, double input2) {
+        if (input2==0){
+            System.out.println("division by 0 is not possible");
+            return 0;
+        }
         return input1 / input2;
     }
 
     //modulus
-    public static int modulus(int input1, int input2) {
+    public static double modulus(double input1, double input2) {
         return input1 % input2;
     }
 
@@ -145,11 +164,11 @@ public class MethodsExercises {
             System.out.println("Your first die rolled : " + randomDie1 + " Your second die rolled : " + randomDie2);
             System.out.println("DO you want to roll again (y/n)?");
             rollAgain = scanner.next().equals("y");
-        }while (rollAgain);
+        } while (rollAgain);
         System.out.println("okay, be that way.");
     }
 
-//5.Game Development 101
+    //5.Game Development 101
 //Welcome to the world of game development!
 //You are going to build a high-low guessing game. Create a class named HighLow inside of src.
 //The specs for the game are:
@@ -159,27 +178,32 @@ public class MethodsExercises {
 //If user's guess is less than the number, it outputs "HIGHER".
 //If user's guess is more than the number, it outputs "LOWER".
 //If a user guesses the number, the game should declare "GOOD GUESS!"
-    public static String HighLow() {
-        int min = 1;
-        int max = 100;
-        double computerNumber = Math.ceil((Math.random() * ((max - min) + 1)));
-        System.out.println(computerNumber);
-        System.out.println("Pick a number between 1 and 100");
-        Scanner scanner = new Scanner(System.in);
-        int userGuess = scanner.nextInt();
-        //stopping condition
-        if (userGuess == computerNumber){
-            System.out.println("Good Guess!");
-        }
 
-        if (userGuess > computerNumber) {
-            System.out.println("LOWER");
-        } else if (userGuess < computerNumber) {
-            System.out.println("HIGHER");
-        }
-        return HighLow();
-
-    }
+//    public static int generateRandomNumber() {
+//        int min = 1;
+//        int max = 100;
+//        double computerNumber = Math.ceil((Math.random() * ((max - min) + 1)));
+//    }
+//    public static void HighLow() {
+//        generateRandomNumber();
+//        System.out.println(generateRandomNumber());
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Pick a number between 1 and 100");
+//        if (scanner.hasNextInt()) {
+//            int userGuess = scanner.nextInt();
+//            System.out.println(computerNumber);
+//            //stopping condition
+//            if (userGuess == computerNumber) {
+//                System.out.println("Good guess!");
+//            }
+//
+//            if (userGuess > computerNumber) {
+//                System.out.println("Guess Lower");
+//            } else {
+//                System.out.println("Guess Higher");
+//            }
+//        }
+//        }
 
 
 
