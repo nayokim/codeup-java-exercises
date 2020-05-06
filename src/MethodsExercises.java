@@ -31,7 +31,7 @@ public class MethodsExercises {
 
         //3 factorial
 //        continueFactorial();
-//        Scanner scan = new Scanner (System.in);
+
 //        while(true){
 //            factorial();
 //            System.out.println("Do you wish to continue (y/n)?");
@@ -43,10 +43,11 @@ public class MethodsExercises {
 
 
         //4 dice
-//        rollDice();
+        Scanner scanner = new Scanner(System.in);
+        rollDice(scanner);
 
         //5 guessing game
-        HighLow();
+//        HighLow();
 
 
     } // end main class
@@ -188,24 +189,42 @@ public class MethodsExercises {
     //Use static methods to implement the method(s) that generate the random numbers.
     //Use the .random method of the java.lang.Math class to generate random numbers.
 
-    public static void rollDice() {
-        int userInputDie1;
-        int userInputDie2;
-        boolean rollAgain;
-        do {
-            System.out.println("Enter the number of sides you would like your dice to have");
-            Scanner scanner = new Scanner(System.in);
-            userInputDie1 = scanner.nextInt();
-            userInputDie2 = scanner.nextInt();
-            double randomDie1 = Math.ceil(Math.random() * (((userInputDie1 - 1) + 1)));
-            double randomDie2 = Math.ceil(Math.random() * (((userInputDie2 - 1) + 1)));
-            System.out.println("Your first die rolled : " + randomDie1 + " Your second die rolled : " + randomDie2);
-            System.out.println("DO you want to roll again (y/n)?");
-            rollAgain = scanner.next().equals("y");
-        } while (rollAgain);
-        System.out.println("okay, be that way.");
-    }
+//    public static void rollDice() {
+//        int userInputDie1;
+//        int userInputDie2;
+//        boolean rollAgain;
+//        do {
+//            System.out.println("Enter the number of sides you would like your dice to have");
+//            Scanner scanner = new Scanner(System.in);
+//            userInputDie1 = scanner.nextInt();
+//            userInputDie2 = scanner.nextInt();
+//            double randomDie1 = Math.ceil(Math.random() * (((userInputDie1 - 1) + 1)));
+//            double randomDie2 = Math.ceil(Math.random() * (((userInputDie2 - 1) + 1)));
+//            System.out.println("Your first die rolled : " + randomDie1 + " Your second die rolled : " + randomDie2);
+//            System.out.println("DO you want to roll again (y/n)?");
+//            rollAgain = scanner.next().equals("y");
+//        } while (rollAgain);
+//        System.out.println("okay, be that way.");
+//    }
 
+    //4 walkthrough
+    public static void rollDice(Scanner scanner) {
+        while (true) {
+            System.out.println("Give me the number of sides");
+
+            short n = Short.parseShort(scanner.nextLine());
+//        Random rdn = new Random(); // using random class
+//        int randomNumber = rdn.nextInt(n) + 1;
+            int range = n - 1 + 1;
+            System.out.println("roll dice 1 = " + ((int) (Math.random() * range) + 1));
+            System.out.println("roll dice 2 = " + ((int) (Math.random() * range) + 1));
+
+            System.out.println("Do you wish to continue (y/n)?");
+            if (scanner.nextLine().toLowerCase().equals("n")){
+                break;
+            }
+        }
+    }
     //5.Game Development 101
 //Welcome to the world of game development!
 //You are going to build a high-low guessing game. Create a class named HighLow inside of src.
@@ -217,28 +236,6 @@ public class MethodsExercises {
 //If user's guess is more than the number, it outputs "LOWER".
 //If a user guesses the number, the game should declare "GOOD GUESS!"
 
-    public static void HighLow() {
-        int min = 1;
-        int max = 100;
-        double computerNumber = Math.ceil((Math.random() * ((max - min) + 1)));
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(computerNumber);
-        System.out.println("Pick a number between 1 and 100");
-        if (scanner.hasNextInt()) {
-            int userGuess = scanner.nextInt();
-            //stopping condition
-            if (userGuess == computerNumber) {
-                System.out.println("Good guess!");
-                return;
-
-            } else if (userGuess > computerNumber) {
-                System.out.println("Guess Lower");
-            } else {
-                System.out.println("Guess Higher");
-            }
-            HighLow();
-        }
-    }
-
+//
 
 }//end class
