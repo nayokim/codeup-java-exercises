@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 //2. Create a class named Bob with a main method for the following exercise.
-public class bob {
+public class Bob {
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
         System.out.println("Say something to Bob");

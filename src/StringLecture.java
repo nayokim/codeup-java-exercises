@@ -85,8 +85,13 @@ public class StringLecture {
 //        String parsedSearch = search.replace("cats", "dogs");
 //        System.out.println(parsedSearch);
 
-        //.subString (int beginIndex[,int endIndex]) - see lecture notes
-//        String name = "Justin Bob Reich";
+//        //        .substring(int beginIndex[, int endIndex])
+////        String name = "Justin Bob Reich";
+////        String firstName = name.substring(0, name.indexOf(" "));
+////
+////        String lastName = name.substring(name.lastIndexOf(" ") + 1);
+////        System.out.println(firstName);
+////        System.out.println(lastName);
 
         //.toUpperCase()
         //.toLowerCase()
@@ -96,7 +101,14 @@ public class StringLecture {
         System.out.println(hello.toUpperCase());
         System.out.println(hello);
 
-        //.trim() - see lecture
+
+        //        .trim()
+//
+//        String input = "     bob        smith\n   ";
+//        String trimmedInput = input.trim();
+//        System.out.println("|" + trimmedInput + "|");
+//
+//        System.out.println("|" + input + "|");
 
 
 
