@@ -1,9 +1,7 @@
-import org.w3c.dom.ls.LSOutput;
 
-import javax.crypto.spec.PSource;
-import java.io.Serializable;
-import java.sql.SQLOutput;
+import java.util.Random;
 import java.util.Scanner;
+
 
 public class MethodsExercises {
     public static void main(String[] args) {
@@ -19,7 +17,10 @@ public class MethodsExercises {
 //        int userInput = getInteger(1, 10);
 
         //3 factorial
-        continueFactorial();
+//        continueFactorial();
+
+        //4 dice
+        rollDice();
 
 
 
@@ -127,6 +128,24 @@ public class MethodsExercises {
     //"Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
     //Use static methods to implement the method(s) that generate the random numbers.
     //Use the .random method of the java.lang.Math class to generate random numbers.
+
+    public static void rollDice(){
+        int userInputDie1;
+        int userInputDie2;
+        System.out.println("Enter the number of sides you would like your dice to have");
+        Scanner scanner = new Scanner (System.in);
+        userInputDie1 = scanner.nextInt();
+        userInputDie2 = scanner.nextInt();
+        double randomDie1 = Math.ceil(Math.random()* (((userInputDie2 - userInputDie1) + 1) + userInputDie1));
+        double randomDie2 = Math.ceil(Math.random()* (((userInputDie2 - userInputDie1) + 1) + userInputDie1));
+        System.out.println("Your first die rolled : " + randomDie1 +" Your first die rolled : " +  randomDie2);
+    }
+
+
+
+
+
+
 
 
 }//end class
