@@ -1,6 +1,7 @@
 import org.w3c.dom.ls.LSOutput;
 
 import javax.crypto.spec.PSource;
+import java.io.Serializable;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -76,8 +77,8 @@ public class MethodsExercises {
 
 
     //3. Calculate the factorial of a number.
-    //Prompt the user to enter an integer from 1 to 10.
-    //Display the factorial of the number entered by the user.
+    //Prompt the user to enter an integer from 1 to 10. x
+    //Display the factorial of the number entered by the user. x
     //Ask if the user wants to continue.
     //Use a for loop to calculate the factorial.
     //Assume that the user will enter an integer, but verify it’s between 1 and 10.
@@ -92,27 +93,28 @@ public class MethodsExercises {
     //3! = 1 x 2 x 3       = 6
     //4! = 1 x 2 x 3 x 4   = 24
 
-    public static int factorial(int n) {
+    public static Serializable factorial(int n) {
         System.out.println("Enter an integer from 1 to 10");
         Scanner scanner = new Scanner(System.in);
         int userFactorialInput = scanner.nextInt();
-        int fact = 1;
-        System.out.println(userFactorialInput + "!");
+        System.out.println("your number in factorial form is: " + userFactorialInput + "!");
         System.out.println("Do you want to continue(y/n)?");
         String userContinue = scanner.next();
+        long fact = 1;
         if (userContinue.equals("y") && userFactorialInput > 0 && userFactorialInput < 11) {
-            System.out.println("user is continuing?: " + userContinue);
-            for (int i = 1; i <= userFactorialInput; i++){
+            for (int i = 1; i <= userFactorialInput; i++) {
                 fact *= i;
                 //fact = 1 * 1 = 1
                 //fact = 1 * 2 = 2
                 //fact = 2 * 3 = 6
                 //fact = 6 * 4 = 24
             }
-            return fact;
-
+            return (int) fact;
+        } else {
+            System.out.println("HEY YOUR NUMBER ISN'T BETWEEN 1 and 10!");
+            factorial(n);
         }
-        return 0;
+        return ("Okay, that's cool. You may continue your day");
     }
 
 }//end class
