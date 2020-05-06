@@ -20,7 +20,10 @@ public class MethodsExercises {
 //        continueFactorial();
 
         //4 dice
-        rollDice();
+//        rollDice();
+
+        //5 guessing game
+        HighLow();
 
 
     } // end main class
@@ -156,6 +159,27 @@ public class MethodsExercises {
 //If user's guess is less than the number, it outputs "HIGHER".
 //If user's guess is more than the number, it outputs "LOWER".
 //If a user guesses the number, the game should declare "GOOD GUESS!"
+    public static String HighLow() {
+        int min = 1;
+        int max = 100;
+        double computerNumber = Math.ceil((Math.random() * ((max - min) + 1)));
+        System.out.println(computerNumber);
+        System.out.println("Pick a number between 1 and 100");
+        Scanner scanner = new Scanner(System.in);
+        int userGuess = scanner.nextInt();
+        //stopping condition
+        if (userGuess == computerNumber){
+            System.out.println("Good Guess!");
+        }
+
+        if (userGuess > computerNumber) {
+            System.out.println("LOWER");
+        } else if (userGuess < computerNumber) {
+            System.out.println("HIGHER");
+        }
+        return HighLow();
+
+    }
 
 
 
