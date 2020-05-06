@@ -23,7 +23,6 @@ public class MethodsExercises {
         rollDice();
 
 
-
     } // end main class
 
     //1.Basic Arithmetic
@@ -94,16 +93,16 @@ public class MethodsExercises {
     //3! = 1 x 2 x 3       = 6
     //4! = 1 x 2 x 3 x 4   = 24
 
-    public static long calculateFactorial(int n){
+    public static long calculateFactorial(int n) {
         long fact = 1;
-            for (int i = 1; i <= n; i++) {
-                fact *= i;
-                //fact = 1 * 1 = 1
-                //fact = 1 * 2 = 2
-                //fact = 2 * 3 = 6
-                //fact = 6 * 4 = 24
-            }
-            return fact;
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+            //fact = 1 * 1 = 1
+            //fact = 1 * 2 = 2
+            //fact = 2 * 3 = 6
+            //fact = 6 * 4 = 24
+        }
+        return fact;
     }
 
     public static void continueFactorial() {
@@ -129,21 +128,34 @@ public class MethodsExercises {
     //Use static methods to implement the method(s) that generate the random numbers.
     //Use the .random method of the java.lang.Math class to generate random numbers.
 
-    public static void rollDice(){
+    public static void rollDice() {
         int userInputDie1;
         int userInputDie2;
-        System.out.println("Enter the number of sides you would like your dice to have");
-        Scanner scanner = new Scanner (System.in);
-        userInputDie1 = scanner.nextInt();
-        userInputDie2 = scanner.nextInt();
-        double randomDie1 = Math.ceil(Math.random()* (((userInputDie2 - userInputDie1) + 1) + userInputDie1));
-        double randomDie2 = Math.ceil(Math.random()* (((userInputDie2 - userInputDie1) + 1) + userInputDie1));
-        System.out.println("Your first die rolled : " + randomDie1 +" Your first die rolled : " +  randomDie2);
+        boolean rollAgain;
+        do {
+            System.out.println("Enter the number of sides you would like your dice to have");
+            Scanner scanner = new Scanner(System.in);
+            userInputDie1 = scanner.nextInt();
+            userInputDie2 = scanner.nextInt();
+            double randomDie1 = Math.ceil(Math.random() * (((userInputDie1 - 1) + 1)));
+            double randomDie2 = Math.ceil(Math.random() * (((userInputDie2 - 1) + 1)));
+            System.out.println("Your first die rolled : " + randomDie1 + " Your second die rolled : " + randomDie2);
+            System.out.println("DO you want to roll again (y/n)?");
+            rollAgain = scanner.next().equals("y");
+        }while (rollAgain);
+        System.out.println("okay, be that way.");
     }
 
-
-
-
+//5.Game Development 101
+//Welcome to the world of game development!
+//You are going to build a high-low guessing game. Create a class named HighLow inside of src.
+//The specs for the game are:
+//Game picks a random number between 1 and 100.
+//Prompts user to guess the number.
+//All user inputs are validated.
+//If user's guess is less than the number, it outputs "HIGHER".
+//If user's guess is more than the number, it outputs "LOWER".
+//If a user guesses the number, the game should declare "GOOD GUESS!"
 
 
 
