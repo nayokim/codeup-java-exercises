@@ -1,12 +1,12 @@
 public class Person {
 
     //field
-    private String name;
+    public String name;
 
     //constructor
     public Person(String name){
-        setName(name);
-        // this.name = name;
+//        setName(name);
+         this.name = name;
     }
 
 
