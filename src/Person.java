@@ -13,6 +13,7 @@ public class Person {
     // returns the person's name
     //you dont need any parameters since its already in the Person class.
     public String getName() {
+
         return this.name;
     }
 

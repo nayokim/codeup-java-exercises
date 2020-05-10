@@ -10,28 +10,34 @@ public class Human {
 
     //a method to get the name
     public String getName(){
+
         return this.name;
     }
 
     // constructor - gives objects properties
     public void setName(String aName){
+
         this.name = aName;
     }
 
     //method
     public String getEmail(){
+
         return email;
     }
 
     public void setEmail(String aEmail){
+
         this.email = aEmail;
     }
 
     public String getAddress(){
+
         return address;
     }
 
     public void setAddress(String aAddress){
+
         this.address = aAddress;
     }
 
