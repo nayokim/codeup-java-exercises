@@ -52,7 +52,6 @@ public class MoviesApplication {
                 viewMoviesByCategory("scifi");
                 System.out.println("\n");
                 break;
-
         }
         return continueRunningApp;
     }
