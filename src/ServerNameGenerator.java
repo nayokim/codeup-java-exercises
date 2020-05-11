@@ -14,6 +14,7 @@ public class ServerNameGenerator {
             "embarrassed",
             "manic"
     };
+
     public static String [] nouns = {
             "Tv",
             "Cat",
