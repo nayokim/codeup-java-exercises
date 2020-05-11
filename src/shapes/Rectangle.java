@@ -5,8 +5,8 @@ public class Rectangle {
     protected double width;
 
     public Rectangle (double width, double length){
-        this.length = length;
         this.width = width;
+        this.length = length;
     }
 
     public void setLengthAndWidth(double width, double length){
@@ -15,11 +15,11 @@ public class Rectangle {
     }
 
     public double getArea(){
-        return length * width;
+        return this.length * this.width;
     }
 
     public double getPerimeter(){
-        return ((2 *length) + (2 * width));
+        return ((2 *this.length) + (2 * this.width));
     }
 
 
