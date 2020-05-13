@@ -21,9 +21,7 @@ public class ShapesTest {
 //        System.out.println(box2.getPerimeter());
 
         Measurable myShape;
-
         myShape = new Rectangle(5, 4);
-
 
         System.out.println("rectangle area: "+  myShape.getArea());
         System.out.println("rectangle perimeter: "+ myShape.getPerimeter());
@@ -31,8 +29,6 @@ public class ShapesTest {
         myShape = new Square(5);
         System.out.println("square area: " + myShape.getArea());
         System.out.println("square perimeter: " + myShape.getPerimeter());
-
-
 
     }
 }
