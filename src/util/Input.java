@@ -15,7 +15,7 @@ public class Input {
     }
 
     public boolean yesNo() {
-        System.out.println("yes or no");
+        System.out.println("y/n");
         String answer = scanner.nextLine().toLowerCase();
 //        String input = getString().toLowerCase();
 //        return answer.equals("yes") || answer.equals("y");
