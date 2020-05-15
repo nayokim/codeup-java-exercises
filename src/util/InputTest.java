@@ -1,7 +1,11 @@
 package util;
 
+import java.util.Scanner;
+
 public class InputTest {
     public static void main(String[] args) {
+
+
         Input input = new Input();
 //        System.out.println("you typed: " + input.getString());
 //        System.out.println("Yes or no: " + input.yesNo());
@@ -9,6 +13,7 @@ public class InputTest {
 //        System.out.println(input.getInt());
 //        System.out.println(input.getDouble(5.5, 10.2));
         System.out.println(input.getDouble());
+
 
     }
 }

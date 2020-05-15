@@ -11,6 +11,7 @@ public class House {
         this.rooms = rooms;
     }
 
+    @Deprecated(since ="Use the other method.")
     public void switchEverythingOn(){
         for(Room room: this.rooms){
             room.switchEverythingOn();

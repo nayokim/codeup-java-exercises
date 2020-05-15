@@ -16,6 +16,7 @@ public class AbstractApplication {
         House smallHouse = new House("123 Cool Address","Slab",rooms );
         System.out.println("The house is " + smallHouse.getSquareFeet() + " sqft");
         smallHouse.switchEverythingOff();
+
         smallHouse.switchEverythingOn();
     }
 }

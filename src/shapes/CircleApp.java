@@ -13,11 +13,11 @@ public class CircleApp {
 //        System.out.println(circle.getCircumference());
 
         //bonus
-        while(input.yesNo()){//while the yesNo is true
-            aCircle = new Circle(input.getDouble());
-            System.out.println("aCircl.getArea()= " + aCircle.getArea() );
-            System.out.println("aCircl.getArea()= " + aCircle.getCircumference() );
-        }
-        System.out.println("Circle.getCount() = " + Circle.getCount());
+//        while(input.yesNo()){//while the yesNo is true
+//            aCircle = new Circle(input.getDouble());
+//            System.out.println("aCircl.getArea()= " + aCircle.getArea() );
+//            System.out.println("aCircl.getArea()= " + aCircle.getCircumference() );
+//        }
+//        System.out.println("Circle.getCount() = " + Circle.getCount());
     }
 }
