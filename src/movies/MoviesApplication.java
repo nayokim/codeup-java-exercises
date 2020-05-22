@@ -77,6 +77,7 @@ public class MoviesApplication {
        }
     }
 
+
     private static int promptUserForChoice() {
         Input input = new Input();
         int responses = input.getInt(0, 5);

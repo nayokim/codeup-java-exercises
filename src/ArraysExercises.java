@@ -12,7 +12,7 @@ public class ArraysExercises {
 //            //make a copy from old array into the new array;
 //            newArray[i] = people[i];
 //        }
-        //use copyOf tool - pass an array and tell the new array how long you want it to be
+        //use copyOf tool - pass an array and tell the new array how long you want it to beœ
         Person [] newArray = Arrays.copyOf(people, people.length + 1);
 
         //indexing always starts at 0; Length will always be one more than the length;

@@ -65,8 +65,8 @@ public class FilesLec {
 //            e.printStackTrace();
 //        }
 
-        writeFile(dataFile,numberList);
-        writeFile(mySecondFile,groceryList);
+        writeFile(dataFile, numberList);
+        writeFile(mySecondFile, groceryList);
 
         //reading files
 //        try {
@@ -95,13 +95,21 @@ public class FilesLec {
 //                exp.printStackTrace();
 //            }
 //        }
+
+        //replace item method
+        List<String> modifiedGrocery = replaceItem(mySecondFile, "milk", "cream");
+
+//        for(String newLine : modifiedGrocery){
+//            System.out.println("newLine = " + newLine);
+//        }
+        writeFile(mySecondFile, modifiedGrocery);
     }//end main class
 
     private static void createDir(Path aDir) {
-        if(Files.notExists(aDir)){
-            try{
+        if (Files.notExists(aDir)) {
+            try {
                 Files.createDirectory(aDir);
-            }catch (IOException e){
+            } catch (IOException e) {
                 System.out.println("problems creating the directory/files");
                 e.printStackTrace();
             }
@@ -110,10 +118,10 @@ public class FilesLec {
 
 
     private static void createAndCheckFile(Path aFile) {
-        if(Files.notExists(aFile)){
-            try{
+        if (Files.notExists(aFile)) {
+            try {
                 Files.createFile(aFile);
-            }catch (IOException e){
+            } catch (IOException e) {
                 System.out.println("problems creating the directory/files");
                 e.printStackTrace();
             }
@@ -133,15 +141,16 @@ public class FilesLec {
 
     }
 
-    public static void writeFile(Path aFile,List<String> aList){
-        try{
-            Files.write(aFile,aList);
+    public static void writeFile(Path aFile, List<String> aList) {
+        try {
+            Files.write(aFile, aList);
             //Files.write(aFile,aList,StandardOpenOption.APPEND);
-        }catch(IOException e){
+        } catch (IOException e) {
             System.out.println("problem writing the files");
             e.printStackTrace();
         }
     }
+
     public static void readFile(Path aFile) {
         try {
             List<String> lines = Files.readAllLines(aFile);
@@ -153,5 +162,25 @@ public class FilesLec {
             e.printStackTrace();
         }
     }
+
+    private static List<String> replaceItem(Path aFile, String find, String replacement) {
+        List<String> newList = new ArrayList<>();
+        try {
+            List<String> lines = Files.readAllLines(aFile);
+            for (String line : lines) {
+                if (line.equals(find)) {
+                    //creating a new copy without milk
+                    newList.add(replacement);
+                    continue;
+                }
+                //adding everything except for the one you are looking for
+                newList.add(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return newList;
+    }
+
 
 }
