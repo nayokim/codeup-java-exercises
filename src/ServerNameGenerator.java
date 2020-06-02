@@ -44,4 +44,6 @@ public class ServerNameGenerator {
         System.out.println(randomNounAdjective(nouns));
         System.out.println(randomNounAdjective(adjectives));
     }
+
+    //test
 }
