@@ -31,8 +31,22 @@ public class HashTables {
             theArray[Integer.parseInt(newElementVal)]=newElementVal;
         }
     }
+    public void hashFunction2(String[] stringsForArray, String [] theArray) {
+        for (int n = 0; n< stringsForArray.length; n++){
+            String newElementVal = stringsForArray[n];
+            int arrayIndex = Integer.parseInt(newElementVal) % 29;
+            System.out.println("Modulus index = " + arrayIndex + " for value " + newElementVal);
+//            while(theArray[arrayIndex != "-1"]){
+//                ++arrayIndex;
+//                System.out.println("Collision, try " + arrayIndex + "instead");
+//                arrayIndex %= arraySize;
+//
+//            }
+            theArray[arrayIndex]= newElementVal;
+        }
+    }
 
-    HashTables(int size){
+        HashTables(int size){
         arraySize = size;
         theArray = new String [size];
         Arrays.fill(theArray, "-1");
