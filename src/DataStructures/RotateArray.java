@@ -11,7 +11,7 @@ public class RotateArray {
         }
 
         for (int i = 0; i < nums.length; i++){
-            nums[i] = newArray[i];
+           nums[i] = newArray[i];
         }
         System.out.println(Arrays.toString(nums));
     }
