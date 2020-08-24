@@ -16,8 +16,9 @@ public class Practice {
 //        String userSentence = scanner.nextLine();
 //        System.out.println("you entered: "+ userSentence);
 //
-        int [] arr = {1,2,3,4};
+        int [] arr = {0,2,3,4};
         int [] subArr = new int [arr.length];
+        //the array you want to copy, the position you want to copy from, location to put  new info, length
         System.arraycopy(arr,0,subArr,0,arr.length);
         for(int no:subArr){
             System.out.println(no);
