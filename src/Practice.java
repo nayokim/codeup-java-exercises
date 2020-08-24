@@ -16,6 +16,12 @@ public class Practice {
 //        String userSentence = scanner.nextLine();
 //        System.out.println("you entered: "+ userSentence);
 //
+        int [] arr = {1,2,3,4};
+        int [] subArr = new int [arr.length];
+        System.arraycopy(arr,0,subArr,0,arr.length);
+        for(int no:subArr){
+            System.out.println(no);
+        }
 
 
     }
