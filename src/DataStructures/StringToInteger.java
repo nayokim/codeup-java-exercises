@@ -13,4 +13,6 @@ public class StringToInteger {
     // Resulting integer cannot be larger than (2^31) — 1 or smaller than -(2^31).
 
 
+    // input : string
+    //output : integer
 }
