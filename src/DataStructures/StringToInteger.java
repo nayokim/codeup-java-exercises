@@ -15,4 +15,22 @@ public class StringToInteger {
 
     // input : string
     //output : integer
+
+    //"4193 with words" - 4193
+    //Input: “+50.890”Output: 50
+
+    //data structure : arrays
+
+    //psudeocode:
+    /*
+    start with index = 0;
+    - while character at current index is white-space, increment index
+    - check if the next character is invalid // return 0
+    - check if the next character is positive or negative sign  - if negative, mark number as negative and increment index
+    - loop through string integer array - cast string character into integer - multiply integer by (10^index) and add to return value
+    - if string contained negative sign, multiply result by -1. if result value is less than min, reassign to min. If result is greater than max, reassign to max.
+    - return value
+     */
+
+
 }
